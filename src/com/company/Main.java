@@ -10,13 +10,10 @@ public class Main {
         //
 
         //   - Вызвать из конструктора с двумя параметрами конструктор с тремя параметрами.
+// Student
 
-        //6. Создать класс `Car` в пакете `com.company.vehicles`, `Engine` в пакете `com.company.details` и `Driver` в пакете `com.company.professions`. Класс `Driver` содержит поля - `ФИО`, `стаж вождения`. Класс `Engine` содержит поля - `мощность`, `производитель`. Класс `Car` содержит поля - `марка автомобиля`, `класс автомобиля`, `вес`, водитель типа `Driver`, мотор типа `Engine`.
-        //Методы `start()`, `stop()`, `turnRight()`, `turnLeft()`, которые выводят на печать: "Поехали", "Останавливаемся", "Поворот направо" или "Поворот налево". А также метод `printInfo()`, который выводит полную информацию об автомобиле, ее водителе и моторе.
-        //Создать производный от `Car` класс  - `Lorry` (грузовик), характеризуемый также грузоподъемностью кузова.
-        //Создать производный от `Car` класс - `SportCar`, характеризуемый также предельной скоростью. Пусть класс `Driver` расширяет класс `Person`.
-        //---
-        //7. Создать класс `Animal` и расширяющие его классы `Dog`, `Cat`, `Horse`. Класс `Animal` содержит переменные `food`, `location` и методы `makeNoise`, `eat`, `sleep`. Метод makeNoise, например, может выводить на консоль "Такое-то животное спит". `Dog`, `Cat`, `Horse` переопределяют методы `makeNoise`, `eat`. Добавьте переменные в классы `Dog`, `Cat`, `Horse`, характеризующие только этих животных. Создайте класс Ветеринар, в котором определите метод `void treatAnimal(Animal animal)`. Пусть этот метод распечатывает `food` и `location` пришедшего на прием животного. В методе main создайте массив типа `Animal`, в который запишите животных всех имеющихся у вас типов. В цикле отправляйте их на прием к ветеринару.
+
+
         Phone phone1 = new Phone(123456, "Sony", 8.5);
         Phone phone2 = new Phone(456789, "Redmi", 12.2);
         Phone phone3 = new Phone(987321, "Apple", 3.8);
@@ -47,15 +44,22 @@ public class Main {
         reader1.returnBook(5);
         reader1.returnBook(new String[]{"Second", "First"});
         reader1.returnBook(book);
-        Student[] student1 = new Student[1];
+        Student[] student1 = new Student[4];
 //        Student[] student2 = new Aspirant[2];
         Random random = new Random();
 
-        student1[0] = new Student(false, "Vasya", "Ivanov", "tr", 50);
-//        student1[1] = new Student(true, "Anna", "Shag", "trw", 99);
-//        student1[2] = new Student(true, "Ganna", "Tag", "pp", 88);
-//        student1[4] = new Student(false, "Ivan", "Smirnov", "RR", 92);
-
-        System.out.println(Arrays.toString(student1));
+//        for (int i = 0; i < student1.length; i++) {
+//            student1[i] = new Student();
+//        }
+//
+////        student1[0] = new Student(false, "Vasya", "Ivanov", "tr", 5);
+////        student1[1] = new Student(true, "Anna", "Shag", "trw", 3);
+////        student1[2] = new Student(true, "Ganna", "Tag", "pp", 5);
+////        student1[3] = new Student(false, "Ivan", "Smirnov", "RR", 3);
+//
+//        System.out.println(student1[0].getScholarship(5));
+//        System.out.println(student1[1].getScholarship(3));
+//        System.out.println(student1[2].getScholarship(5));
+//        System.out.println(student1[3].getScholarship(3));
     }
 }

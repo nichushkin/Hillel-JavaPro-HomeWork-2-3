@@ -16,15 +16,7 @@ public class Student {
     private String lastName;
     private String group;
     private double averageMark;
-    private Student student = new Aspirant(scientificPaper, firstName, lastName, group, averageMark);
-
-    public Student(boolean scientificPaper, String firstName, String lastName, String group, double averageMark) {
-        this.scientificPaper = scientificPaper;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.group = group;
-        this.averageMark = averageMark;
-    }
+    private Student student = new Aspirant();
 
     public double getScholarship(int averageMark){
         double resault = 0;
