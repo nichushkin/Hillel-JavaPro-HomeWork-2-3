@@ -41,9 +41,9 @@ public class Phone {
         this.weight = weight;
     }
 
-    public Phone(int number, double weight) {
-        this(number, model, weight);
-    }
+//    public Phone(int number, double weight) {
+//        this(number, model, weight);
+//    }
 
     public void receiveCall(String name) {
         System.out.printf("Звонит: %s ", name);
