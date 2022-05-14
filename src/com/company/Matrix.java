@@ -19,29 +19,33 @@ public class Matrix {
     Random random = new Random();
     int value = random.nextInt(1, 10);
 
+
     public Matrix(int row, int column){
-        double[][] matrix = new double[row][column];
+        this.row = row;
+        this.column = column;
+        double[][] matrix = new double[this.row][this.column];
         this.matrix = matrix;
     }
 
-    public double randomValue(){
+    public double randomValue() {
         return random.nextDouble(0, 1);
     }
 
-    public int getRow(){
+    public int getRow() {
         return matrix.length;
     }
 
-    public int getColumn(){
+    public int getColumn() {
         return matrix[0].length;
     }
 
-    public void creatValuesMatrix() {
+    public double[][] creatValuesMatrix() {
         for (int i = 0; i < getRow(); i++) {
             for (int j = 0; j < getColumn(); j++) {
                 matrix[i][j] = randomValue();
             }
         }
+        return matrix;
     }
 
     public void printMatrix() {
@@ -61,6 +65,8 @@ public class Matrix {
         }
         return matrix;
     }
+
+
 //
 //        System.out.println();
 //        for (int i = 0; i < matrix.length; i++) {

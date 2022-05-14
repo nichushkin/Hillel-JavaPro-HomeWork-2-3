@@ -36,8 +36,7 @@ public class Phone {
     }
 
     public Phone(int number, String model, double weight) {
-        this.number = number;
-        this.model = model;
+        this(number, model);
         this.weight = weight;
     }
 
