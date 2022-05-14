@@ -20,7 +20,7 @@ public class Matrix {
     int value = random.nextInt(1, 10);
 
 
-    public Matrix(int row, int column){
+    public Matrix(int row, int column) {
         this.row = row;
         this.column = column;
         double[][] matrix = new double[this.row][this.column];
@@ -66,7 +66,7 @@ public class Matrix {
         return matrix;
     }
 
-
+    }
 //
 //        System.out.println();
 //        for (int i = 0; i < matrix.length; i++) {
