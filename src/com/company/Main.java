@@ -44,9 +44,22 @@ public class Main {
         reader1.returnBook(5);
         reader1.returnBook(new String[]{"Second", "First"});
         reader1.returnBook(book);
-        Student[] student1 = new Student[4];
+
+        Matrix matrix1 = new Matrix(3,3);
+        Matrix matrix2 = new Matrix(3,3);
+        Matrix matrix3 = new Matrix(3,3);
+        matrix1.creatValuesMatrix();
+        matrix1.printMatrix();
+        System.out.println();
+        matrix2.creatValuesMatrix();
+        matrix2.printMatrix();
+        matrix3.matrixSum(matrix1, matrix2);
+        System.out.println();
+        matrix3.printMatrix();
+
+//        Student[] student1 = new Student[4];
 //        Student[] student2 = new Aspirant[2];
-        Random random = new Random();
+//        Random random = new Random();
 
 //        for (int i = 0; i < student1.length; i++) {
 //            student1[i] = new Student();
