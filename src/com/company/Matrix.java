@@ -53,12 +53,13 @@ public class Matrix {
         }
     }
 
-    public void matrixSum(Matrix matrix1, Matrix matrix2) {
+    public double[][] matrixSum(Matrix matrix1, Matrix matrix2) {
         for (int i = 0; i < getRow(); i++) {
             for (int j = 0; j < getColumn(); j++) {
                 matrix[i][j] = matrix1 + matrix2;
             }
         }
+        return matrix;
     }
 //
 //        System.out.println();
