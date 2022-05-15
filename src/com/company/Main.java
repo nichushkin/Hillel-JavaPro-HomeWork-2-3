@@ -47,15 +47,25 @@ public class Main {
 
         Matrix matrix1 = new Matrix(3,3);
         Matrix matrix2 = new Matrix(3,3);
-        Matrix matrix3 = new Matrix(3,3);
+        Matrix matrixSum = new Matrix(3,3);
+        System.out.println("1-я матрица");
         matrix1.creatValuesMatrix();
         matrix1.printMatrix();
-        System.out.println();
+        System.out.println("2-я матрица");
         matrix2.creatValuesMatrix();
         matrix2.printMatrix();
-        matrix3.matrixSum(matrix1, matrix2);
-        System.out.println();
-        matrix3.printMatrix();
+        System.out.println("Cложение матриц");
+        matrixSum.matrixSum(matrix1, matrix2);
+        matrixSum.printMatrix();
+        System.out.println("Умножение матриц");
+        Matrix matrixMultiplyMatrix = new Matrix(3,3);
+        matrixMultiplyMatrix.multiplyMatrix(matrix1, matrixSum);
+        matrixMultiplyMatrix.printMatrix();
+        System.out.println("Умножение матрицы на число");
+        Matrix matrixMultiplyValue = new Matrix(3,3);
+        matrixMultiplyValue.matrixMultiplyValue(matrix1);
+        matrixMultiplyValue.printMatrix();
+
 
 //        Student[] student1 = new Student[4];
 //        Student[] student2 = new Aspirant[2];

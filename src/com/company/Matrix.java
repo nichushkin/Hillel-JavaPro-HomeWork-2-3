@@ -31,17 +31,9 @@ public class Matrix {
         return random.nextDouble(0, 1);
     }
 
-    public int getRow() {
-        return matrix.length;
-    }
-
-    public int getColumn() {
-        return matrix[0].length;
-    }
-
     public double[][] creatValuesMatrix() {
-        for (int i = 0; i < getRow(); i++) {
-            for (int j = 0; j < getColumn(); j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = randomValue();
             }
         }
@@ -49,8 +41,8 @@ public class Matrix {
     }
 
     public void printMatrix() {
-        for (int i = 0; i < getRow(); i++) {
-            for (int j = 0; j < getColumn(); j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 System.out.printf("  %2.2f", matrix[i][j]);
             }
             System.out.println();
@@ -58,49 +50,29 @@ public class Matrix {
     }
 
     public double[][] matrixSum(Matrix matrix1, Matrix matrix2) {
-        for (int i = 0; i < getRow(); i++) {
-            for (int j = 0; j < getColumn(); j++) {
-                matrix[i][j] = matrix1 + matrix2;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = matrix1.matrix[i][j] + matrix2.matrix[i][j];
             }
         }
         return matrix;
     }
 
+    public double[][] multiplyMatrix(Matrix matrix1, Matrix matrix2) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = matrix1.matrix[i][j] * matrix2.matrix[i][j];
+            }
+        }
+        return matrix;
     }
-//
-//        System.out.println();
-//        for (int i = 0; i < matrix.length; i++) {
-//        for (int j = 0; j < matrix[0].length; j++) {
-//            System.out.printf("  %2.2f", matrix[i][j]);
-//        }
-//        System.out.println();
-//    }
-//
-//        for (int i = 0; i < matrix.length; i++) {
-//        for (int j = 0; j < matrix[0].length; j++) {
-//            matrix[i][j] = matrix[i][j] * n;
-//        }
-//    }
-//
-//        System.out.println();
-//        for (int i = 0; i < matrix.length; i++) {
-//        for (int j = 0; j < matrix[0].length; j++) {
-//            System.out.printf("  %2.2f", matrix[i][j]);
-//        }
-//        System.out.println();
-//    }
-//
-//        for (int i = 0; i < matrix.length; i++) {
-//        for (int j = 0; j < matrix[0].length; j++) {
-//            matrix[i][j] = matrix1[i][j] * matrix2[i][j];
-//        }
-//    }
-//
-//        System.out.println();
-//        for (int i = 0; i < matrix.length; i++) {
-//        for (int j = 0; j < matrix[0].length; j++) {
-//            System.out.printf("  %2.2f", matrix[i][j]);
-//        }
-//        System.out.println();
-//    }
+
+    public double[][] matrixMultiplyValue(Matrix matrix1) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = matrix1.matrix[i][j] * value;
+            }
+        }
+        return matrix;
+    }
 }
