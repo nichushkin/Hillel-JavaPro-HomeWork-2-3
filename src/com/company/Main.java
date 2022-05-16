@@ -76,22 +76,19 @@ public class Main {
         }
 
 
-//        Student[] student1 = new Student[4];
-//        Student[] student2 = new Aspirant[2];
+        Student[] student1 = new Student[4];
+        Student[] student2 = new Aspirant[2];
 //        Random random = new Random();
 
-//        for (int i = 0; i < student1.length; i++) {
-//            student1[i] = new Student();
-//        }
-//
-////        student1[0] = new Student(false, "Vasya", "Ivanov", "tr", 5);
-////        student1[1] = new Student(true, "Anna", "Shag", "trw", 3);
-////        student1[2] = new Student(true, "Ganna", "Tag", "pp", 5);
-////        student1[3] = new Student(false, "Ivan", "Smirnov", "RR", 3);
-//
-//        System.out.println(student1[0].getScholarship(5));
-//        System.out.println(student1[1].getScholarship(3));
-//        System.out.println(student1[2].getScholarship(5));
-//        System.out.println(student1[3].getScholarship(3));
+        student1[0] = new Student("Vasya", "Ivanov", "tr", 5);
+        student1[1] = new Student("Anna", "Shag", "trw", 3);
+        student1[2] = new Student("Ganna", "Tag", "pp", 5);
+        student1[3] = new Student("Ivan", "Smirnov", "RR", 3);
+        System.out.println(Arrays.toString(student1));
+        System.out.println();
+        student2[0] = new Aspirant("Petr", "Usach", "um1", 5, true);
+        student2[1] = new Aspirant("Eva", "Roza", "um2", 3, true);
+        System.out.println(Arrays.toString(student2));
+
     }
 }

@@ -11,12 +11,21 @@ package com.company;
 //   метод `getScholarship()` для каждого элемента массива.
 //---
 public class Student {
-    private boolean scientificPaper = false;
+//    private boolean scientificPaper = false;
     private String firstName;
     private String lastName;
     private String group;
-    private double averageMark;
-    private Student student = new Aspirant();
+    private int averageMark;
+
+    public Student(){
+    }
+    public Student(String firstName, String lastName, String group,
+                   int averageMark) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.averageMark = averageMark;
+    }
 
     public double getScholarship(int averageMark){
         double resault = 0;
@@ -26,5 +35,30 @@ public class Student {
             resault = 80;
         }
         return resault;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public int getAverageMark() {
+        return averageMark;
+    }
+
+    @Override
+    public String toString() {
+        return "Студент: " + "Имя:" + getFirstName() +
+                ", Фамилия: " + getLastName() +
+                ", группа = " + getGroup() +
+                ", средний бал = " + getAverageMark() +
+                ", cтепендия составляет: " + getScholarship(getAverageMark()) + " грн" + "\n";
     }
 }
