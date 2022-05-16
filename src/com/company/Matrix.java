@@ -17,9 +17,6 @@ public class Matrix {
     private int column;
     double[][] matrix;
     Random random = new Random();
-    int value = random.nextInt(1, 10);
-
-
     public Matrix(int row, int column) {
         this.row = row;
         this.column = column;
@@ -49,28 +46,43 @@ public class Matrix {
         }
     }
 
-    public double[][] matrixSum(Matrix matrix1, Matrix matrix2) {
+    public double[][] matrixSum (Matrix matrix1, Matrix matrix2) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = matrix1.matrix[i][j] + matrix2.matrix[i][j];
+                if (matrix.length != matrix1.matrix.length || matrix.length != matrix2.matrix.length ||
+                        matrix1.matrix.length != matrix2.matrix.length || matrix.length != matrix1.matrix[0].length
+                        || matrix.length != matrix2.matrix[0].length ||
+                        matrix1.matrix[0].length != matrix2.matrix[0].length) {
+                    throw new ArrayIndexOutOfBoundsException("Ошибка: Размеры матриц должны быть одинаковы");
+                }
+                    matrix[i][j] = matrix1.matrix[i][j] + matrix2.matrix[i][j];
             }
         }
         return matrix;
     }
 
-    public double[][] multiplyMatrix(Matrix matrix1, Matrix matrix2) {
+    public double[][] multiplyMatrix(Matrix matrix1, Matrix matrix2)  {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = matrix1.matrix[i][j] * matrix2.matrix[i][j];
+                if (matrix.length != matrix1.matrix.length || matrix.length != matrix2.matrix.length ||
+                        matrix1.matrix.length != matrix2.matrix.length || matrix.length != matrix1.matrix[0].length
+                        || matrix.length != matrix2.matrix[0].length ||
+                        matrix1.matrix[0].length != matrix2.matrix[0].length) {
+                    throw new ArrayIndexOutOfBoundsException("Ошибка: Размеры матриц должны быть одинаковы");
+                }
+                    matrix[i][j] = matrix1.matrix[i][j] * matrix2.matrix[i][j];
             }
         }
         return matrix;
     }
 
-    public double[][] matrixMultiplyValue(Matrix matrix1) {
+    public double[][] matrixMultiplyValue(Matrix matrix1, int value){
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = matrix1.matrix[i][j] * value;
+                if (matrix.length != matrix1.matrix[0].length || matrix.length != matrix1.matrix.length) {
+                    throw new ArrayIndexOutOfBoundsException("Ошибка: Размеры матриц должны быть одинаковы");
+                }
+                    matrix[i][j] = matrix1.matrix[i][j] * value;
             }
         }
         return matrix;

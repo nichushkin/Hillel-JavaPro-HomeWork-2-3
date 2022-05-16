@@ -5,14 +5,9 @@ import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         // ### Часть 3:
-        //
-
         //   - Вызвать из конструктора с двумя параметрами конструктор с тремя параметрами.
-// Student
-
-
 
         Phone phone1 = new Phone(123456, "Sony", 8.5);
         Phone phone2 = new Phone(456789, "Redmi", 12.2);
@@ -47,7 +42,7 @@ public class Main {
 
         Matrix matrix1 = new Matrix(3,3);
         Matrix matrix2 = new Matrix(3,3);
-        Matrix matrixSum = new Matrix(3,3);
+        Matrix matrixSum = new Matrix(3, 3);
         System.out.println("1-я матрица");
         matrix1.creatValuesMatrix();
         matrix1.printMatrix();
@@ -55,16 +50,30 @@ public class Main {
         matrix2.creatValuesMatrix();
         matrix2.printMatrix();
         System.out.println("Cложение матриц");
-        matrixSum.matrixSum(matrix1, matrix2);
-        matrixSum.printMatrix();
+        try{
+            matrixSum.matrixSum(matrix1, matrix2);
+            matrixSum.printMatrix();
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
         System.out.println("Умножение матриц");
         Matrix matrixMultiplyMatrix = new Matrix(3,3);
-        matrixMultiplyMatrix.multiplyMatrix(matrix1, matrixSum);
-        matrixMultiplyMatrix.printMatrix();
-        System.out.println("Умножение матрицы на число");
+        try{
+            matrixMultiplyMatrix.multiplyMatrix(matrix1, matrix2);
+            matrixMultiplyMatrix.printMatrix();
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
+        Random random = new Random();
+        int value = random.nextInt(1, 10);
+        System.out.printf("Умножение матрицы на число %d %n", value);
         Matrix matrixMultiplyValue = new Matrix(3,3);
-        matrixMultiplyValue.matrixMultiplyValue(matrix1);
-        matrixMultiplyValue.printMatrix();
+        try{
+            matrixMultiplyValue.matrixMultiplyValue(matrix1, value);
+            matrixMultiplyValue.printMatrix();
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
 
 
 //        Student[] student1 = new Student[4];
