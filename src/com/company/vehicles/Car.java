@@ -22,6 +22,54 @@ public class Car {
     private Driver driver;
     private Engine engine;
 
+    public Car(String brandCar, String classCar, int weightCar, Driver driver, Engine engine) {
+        this.brandCar = brandCar;
+        this.classCar = classCar;
+        this.weightCar = weightCar;
+        this.driver = driver;
+        this.engine = engine;
+    }
+
+    public String getBrandCar() {
+        return brandCar;
+    }
+
+    public String getClassCar() {
+        return classCar;
+    }
+
+    public int getWeightCar() {
+        return weightCar;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setBrandCar(String brandCar) {
+        this.brandCar = brandCar;
+    }
+
+    public void setClassCar(String classCar) {
+        this.classCar = classCar;
+    }
+
+    public void setWeightCar(int weightCar) {
+        this.weightCar = weightCar;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
     public void start(){
         System.out.println("Поехали");
     }
@@ -40,6 +88,6 @@ public class Car {
 
     public void printInfo(){
         System.out.printf("Модель автомобиля: %s, класс автомобиля: %s, вес автомобиля: %d, водитель: %s, " +
-                "двигатель: %s", brandCar, classCar, weightCar, driver, engine);
+                "двигатель: %s", getBrandCar(), getClassCar(), getWeightCar(), getDriver().toString(), getEngine());
     }
 }

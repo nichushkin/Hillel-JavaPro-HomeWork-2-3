@@ -1,11 +1,17 @@
 package com.company;
 
+import com.company.details.Engine;
+import com.company.professions.Driver;
+import com.company.vehicles.Car;
+import com.company.vehicles.Lorry;
+import com.company.vehicles.SportCar;
+
 import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // ### Часть 3:
         //   - Вызвать из конструктора с двумя параметрами конструктор с тремя параметрами.
 
@@ -40,8 +46,8 @@ public class Main {
         reader1.returnBook(new String[]{"Second", "First"});
         reader1.returnBook(book);
 
-        Matrix matrix1 = new Matrix(3,3);
-        Matrix matrix2 = new Matrix(3,3);
+        Matrix matrix1 = new Matrix(3, 3);
+        Matrix matrix2 = new Matrix(3, 3);
         Matrix matrixSum = new Matrix(3, 3);
         System.out.println("1-я матрица");
         matrix1.creatValuesMatrix();
@@ -50,28 +56,28 @@ public class Main {
         matrix2.creatValuesMatrix();
         matrix2.printMatrix();
         System.out.println("Cложение матриц");
-        try{
+        try {
             matrixSum.matrixSum(matrix1, matrix2);
             matrixSum.printMatrix();
-        } catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
         }
         System.out.println("Умножение матриц");
-        Matrix matrixMultiplyMatrix = new Matrix(3,3);
-        try{
+        Matrix matrixMultiplyMatrix = new Matrix(3, 3);
+        try {
             matrixMultiplyMatrix.multiplyMatrix(matrix1, matrix2);
             matrixMultiplyMatrix.printMatrix();
-        } catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
         }
         Random random = new Random();
         int value = random.nextInt(1, 10);
         System.out.printf("Умножение матрицы на число %d %n", value);
-        Matrix matrixMultiplyValue = new Matrix(3,3);
-        try{
+        Matrix matrixMultiplyValue = new Matrix(3, 3);
+        try {
             matrixMultiplyValue.matrixMultiplyValue(matrix1, value);
             matrixMultiplyValue.printMatrix();
-        } catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
         }
 
@@ -90,5 +96,23 @@ public class Main {
         student2[1] = new Aspirant("Eva", "Roza", "um2", 3, true);
         System.out.println(Arrays.toString(student2));
 
+        Driver driver1 = new Driver("Ivanov", 10);
+        Engine engine1 = new Engine(80, 50);
+        Car car1 = new Car("WV", "A", 1500, driver1, engine1);
+        car1.printInfo();
+        System.out.println();
+
+        Driver driver2 = new Driver("Smirnof", 15);
+        Engine engine2 = new Engine(180, 250);
+        Lorry lorry1 = new Lorry("Ford", "B", 3500, driver2, engine2, 5500);
+        lorry1.printInfo();
+        System.out.println();
+
+        Driver driver3 = new Driver("Garry", 3);
+        Engine engine3 = new Engine(750, 450);
+        SportCar sportCar1 = new SportCar("KIA", "D", 1200, driver3,
+                engine3, 250);
+        sportCar1.printInfo();
+        System.out.println();
     }
 }
