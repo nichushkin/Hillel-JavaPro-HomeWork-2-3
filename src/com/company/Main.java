@@ -18,9 +18,11 @@ public class Main {
         Phone phone1 = new Phone(123456, "Sony", 8.5);
         Phone phone2 = new Phone(456789, "Redmi", 12.2);
         Phone phone3 = new Phone(987321, "Apple", 3.8);
+        Phone phone4 = new Phone(78945, 1.1);
         System.out.println(phone1.toString());
         System.out.println((phone2.toString()));
         System.out.println(phone3.toString());
+        System.out.println(phone4.toString());
         phone1.receiveCall("Vasya");
         phone1.getNumber();
         phone2.receiveCall("Petya");
