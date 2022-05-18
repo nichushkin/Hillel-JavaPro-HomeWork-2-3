@@ -1,7 +1,12 @@
 package com.company;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private String meowTone;
+
+    public Cat(String food, String location, String meowTone) {
+        super(food, location);
+        this.meowTone = meowTone;
+    }
 
     public String getMeowTone() {
         return meowTone;
@@ -11,11 +16,11 @@ public class Cat extends Animal{
         this.meowTone = meowTone;
     }
 
-    public void makeNoise(){
+    public void makeNoise() {
         System.out.println("Кот издает звук");
     }
 
-    public void eat(){
+    public void eat() {
         System.out.println("Кот ест");
     }
 }

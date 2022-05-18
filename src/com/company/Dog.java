@@ -1,7 +1,12 @@
 package com.company;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
     private String barkingTone;
+
+    public Dog(String food, String location, String barkingTone) {
+        super(food, location);
+        this.barkingTone = barkingTone;
+    }
 
     public String getBarkingTone() {
         return barkingTone;
@@ -11,11 +16,11 @@ public class Dog extends Animal{
         this.barkingTone = barkingTone;
     }
 
-    public void makeNoise(){
+    public void makeNoise() {
         System.out.println("Собака издает звук");
     }
 
-    public void eat(){
+    public void eat() {
         System.out.println("Собака ест");
     }
 }

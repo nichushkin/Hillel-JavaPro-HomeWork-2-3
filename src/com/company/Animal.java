@@ -8,8 +8,17 @@ public class Animal {
     // Создайте класс Ветеринар, в котором определите метод `void treatAnimal(Animal animal)`. Пусть этот метод
     // распечатывает `food` и `location` пришедшего на прием животного. В методе main создайте массив типа `Animal`,
     // в который запишите животных всех имеющихся у вас типов. В цикле отправляйте их на прием к ветеринару.
-private String food;
-private String location;
+    private String food;
+    private String location;
+
+    public Animal(){
+
+    }
+
+    public Animal(String food, String location) {
+        this.food = food;
+        this.location = location;
+    }
 
     public String getFood() {
         return food;
@@ -27,15 +36,15 @@ private String location;
         this.location = location;
     }
 
-    public void makeNoise(){
-    System.out.println("Такое-то животное издает звук");
-}
+    public void makeNoise() {
+        System.out.println("Такое-то животное издает звук");
+    }
 
-public void eat(){
-    System.out.println("Такое-то животное ест");
-}
+    public void eat() {
+        System.out.println("Такое-то животное ест");
+    }
 
-public void sleep(){
-    System.out.println("Такое-то животное спит");
-}
+    public void sleep() {
+        System.out.println("Такое-то животное спит");
+    }
 }

@@ -114,5 +114,16 @@ public class Main {
                 engine3, 250);
         sportCar1.printInfo();
         System.out.println();
+
+        Animal[] animalWendsday = new Animal[6];
+        animalWendsday[0] = new Cat("meat", "Dnipro", "Meom");
+        animalWendsday[1] = new Cat("vegetables", "Kiyv", "Meonme");
+        animalWendsday[2] = new Dog("meat", "Dnipro", "Bark");
+        animalWendsday[3] = new Dog("bone", "Kiyv", "Bark");
+        animalWendsday[4] = new Horse("vegetables", "Kiyv", "Igogo");
+        animalWendsday[5] = new Horse("Grass", "Dnipro", "BrBr");
+
+        Veterinary veterinary = new Veterinary(animalWendsday);
+        veterinary.treatAnimal(animalWendsday);
     }
 }
